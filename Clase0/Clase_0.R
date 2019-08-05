@@ -28,3 +28,7 @@ median(diametro)
 sd(diametro)
 var(diametro)
 
+# Gráficas ----------------------------------------------------------------
+
+boxplot(diametro, horizontal = TRUE, col="lightblue", main="Diámetro",
+        xlab="D (cm)")
