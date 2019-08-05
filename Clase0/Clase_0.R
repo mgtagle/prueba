@@ -53,6 +53,12 @@ mean(DB_alturas$crecimiento)
 
 sum(DB_alturas$crecimiento < mean(DB_alturas$crecimiento))
 
-TratA <- DB_alturas[(DB_alturas$tratamiento == "TA"),]
+# Excluir el Tratamiento A
+Trat_A <- DB_alturas[!(DB_alturas$tratamiento == "TA"),]
 
 
+
+# Submuestra --------------------------------------------------------------
+
+T.mean <- subset(DB_alturas, crecimiento >= mean(DB_alturas$crecimiento))
+boxplot(T.mean$crecimiento ~ T.mean$tratamiento)
