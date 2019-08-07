@@ -37,3 +37,18 @@ t.test(vivero$IE ~ vivero$Tratamiento, var.equal =T)
 # Existe una diferencia significativa antre el IE de las plántulas fertilizadas.
 # El valor de p (0.004) comprueba nuestra hipótesis de que el fertilizante 
 # "Power" mejora el IE. 
+
+t.test(vivero$IE ~ vivero$Tratamiento)
+
+
+# Prueba de t muestras dependientes ---------------------------------------
+
+t.test(vivero$IE ~ vivero$Tratamiento, paired = T)
+
+
+# Ejercicio Produccion ----------------------------------------------------
+
+inventario <- read.csv("C:/MCF202-2019/prueba/Datos/Produccion.csv")
+summary(inventario)
+
+
