@@ -51,4 +51,9 @@ t.test(vivero$IE ~ vivero$Tratamiento, paired = T)
 inventario <- read.csv("C:/MCF202-2019/prueba/Datos/Produccion.csv")
 summary(inventario)
 
+boxplot(inventario$Kgsem ~ inventario$Tiempo)
+t.test(inventario$Kgsem ~ inventario$Tiempo, paired=T)
 
+tapply(inventario$Germ, inventario$Tiempo, mean)
+boxplot(inventario$Germ ~ inventario$Tiempo)
+t.test(inventario$Germ ~ inventario$Tiempo, paired = T)
